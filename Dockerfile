@@ -14,7 +14,6 @@ COPY main.go .
 
 RUN go build -o docker-chromedp -v main.go
 
-# arm64 fork of chromedp/headless-shell
 FROM louiepascual/headless-shell-arm64:121.0.6167.160 AS final
 
 WORKDIR /app
