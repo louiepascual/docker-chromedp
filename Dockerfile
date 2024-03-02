@@ -14,7 +14,7 @@ COPY main.go .
 
 RUN go build -o docker-chromedp -v main.go
 
-FROM louiepascual/headless-shell:121.0.6167.184 AS final
+FROM louiepascual/headless-shell:122.0.6261.94 AS final
 
 WORKDIR /app
 COPY --from=build /app/docker-chromedp ./
